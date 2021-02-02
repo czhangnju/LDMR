@@ -28,7 +28,7 @@ end
 clear train_data train_label
 
 n = size(ttdat, 2);
-Proj = pinv(trdat'*trdat+0.01*size(trdat,2))*trdat';
+Proj = pinv(trdat'*trdat+0.01*eye(size(trdat,2)))*trdat';
 
 alpha = 0.5;
 beta  = 1e-3;
